@@ -1,0 +1,158 @@
+########################################################################
+# Script name  :    options.txt
+#
+# Date created :    August 2008
+#
+# Author       :    Fabian Schreiber <fschrei@gwdg.de>
+# 
+#  
+# This is the configuration file for OrthoSelect
+# See the User manual for detailed descriptions
+#
+#
+# NOTE: Paths must end with "/"
+########################################################################
+
+#####################################
+####### PROJECT OPTIONS #############
+#####################################
+## PROJECT NAME
+	project_name = "project1"
+## ROOT DIRECTORY FOR ANALYSIS (absolute pathname required)
+	root_directory = "ADD CURRENT WORKING DIRECTORY HERE"
+#####################################
+#####################################
+
+#####################################
+####### ORTHOLOG DATABASE ###########
+#####################################
+# Database to blast against
+# KOG = "k"
+# OrthoMCL = "o"
+#####################################
+	orthology_database_type = "k"
+#####################################
+	
+
+
+#####################################
+####### ORTHOLOGY SEARCH ############
+#####################################
+##### Taxa List to analyse###########
+### Name of file in (root-directory)
+	taxa_list = "taxa_list.txt"
+##### BLAST-Options #################
+##### e.g. 1e-10    #################
+	e_value = "1e-10"
+#####################################
+##### Minimum length of Hit (AA)#####
+	minimum_length_of_hit = "10"
+#####################################
+##### FOR PARTITIONED ANALYSIS ######
+	no_threads = "5000"
+#####################################
+
+
+
+
+#####################################
+##### Statistics ####################
+#####################################
+#####################################
+### LOCATION OF FOLDER CONTAINING TAXA OF INTEREST
+### Name of file in (project-directory)
+	statistic_directory = "reduced_genes"
+#####################################
+
+
+
+#####################################
+##### GENE SELECTION (OPTIONAL) #####
+#####################################
+# Options
+# Single Taxa = "s"
+# Monophylum = "m"
+#####################################
+	gene_selection_option = "s"
+### LOCATION OF FOLDER CONTAINING TAXA OF INTEREST
+### Name of directory in (project-directory)
+	gene_selection_directory = "selected_genes"
+### LOCATION OF FILE CONTAINING TAXA OF INTEREST
+### Name of file in (root-directory)
+	required_taxa_file = "required_taxa_list.txt"
+#####################################
+#####################################
+
+
+
+#####################################
+##### ELIMINATING REDUNDANCIES ######
+#####################################
+### INPUT FOLDER FOR CALCULATION
+### Name of directory in (project-directory)
+	distance_calculation_input = "selected_genes"
+### OUTPUT FOLDER FOR CALCULATION
+### Name of directory in (project-directory)
+	distance_calculation_output = "reduced_genes"
+### TRANSLATED SEQUENCE DATABASE
+	translated_sequences_folder = "translated_est_libraries"
+### ALIGNMENT METHOD
+# Options
+# Muscle = m
+# T-COFFEE = t
+# Prank = p
+#####################################
+	alignment_method = "m"
+#####################################
+## OTHER ALIGNMENT METHODS
+# System call of different alignment method
+# Use "$fasta_file_reduced" as Input and
+# "$final_alignment_file" as Output
+# e.g. for program xyz:
+# xyz -in $fasta_file_reduced -out $final_alignment_file
+#
+#####################################
+	different_alignment_method = ""
+#####################################
+### DISTANCE MATRIX TYPE
+# Options
+# From Alignment (matrix type 1) = "a"
+# Custom Distance Matrix (matrix type 2) = "g"
+#####################################
+	distance_matrix_type = "g"
+#####################################
+#####################################
+
+
+
+#####################################
+##### POST PROCESSING ###############
+#####################################
+# Select Method to be used
+# Gblocks = "g"
+# Noisy = "n"
+#####################################
+	post_method = "g"
+
+#####################################
+# Use AliScore
+# "y" to use Aliscore, "n" not to use it
+	aliscore = "y"
+#####################################
+
+### INPUT FOLDER
+### Name of directory in (project-directory)
+	post_process_directory = "reduced_genes"
+##### GBLOCKS ###############
+# PARAMETERS FOR GBLOCKS (leave blank for defaults)
+	gblocks_b1 = ""
+	gblocks_b2 = ""
+	gblocks_b3 = ""
+	gblocks_b4 = ""
+	gblocks_b5 = ""
+#####################################
+# Filter sequencing with less than X % character
+	post_alignment_filter = "t"
+	post_alignment_threshold = "50"
+#####################################
+

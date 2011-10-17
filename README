@@ -1,0 +1,66 @@
+README for OrthoSelect
+--------------------------
+
+Test data
+--------------------------------------------------------------------------------------------------------
+The directory "project1" contains a test run using publicly available ESTs.
+
+
+The following executable have to be in your path so that OrthoSelect can correctly work:
+--------------------------------------------------------------------------------------------------------
+	blastall
+	hmmbuild
+	hmmsearch
+	genewise
+	ESTScan
+	muscle
+	wget (optional)
+	noisy (optional)
+	t_coffee
+	muscle
+
+The following Environmental variables have to be set:
+------------------------------------------------------------------------------
+	WISECONFIGDIR
+	ESTSCANDIR
+
+The following ESTScan matrices will be used (put them in the ESTSCANDIR)
+------------------------------------------------------------------------------
+	At.smat
+	Dm.smat
+	Dr.smat
+	Hs.smat
+	Mm.smat
+	Rn.smat
+
+
+The archive includes these files:
+----------------------------------------------------
+	README
+	INSTALL
+        perl_scripts/auto_download.pl
+	perl_scripts/create_taxa_file.pl
+	perl_scripts/gene_selection.pl
+	db/
+	lib/
+	lib/Blaststuff.pm
+	lib/Iostuff.pm
+	options.txt
+	perl_scripts/
+	perl_scripts/post_processing.pl
+	perl_scripts/prepare_analysis.pl
+	perl_scripts/select_best_ortholog.pl
+	perl_scripts/start_blasto_nucleotide.pl
+	perl_scripts/start_filter_redundant_cluster.pl
+	perl_scripts/start_filter_redundant_single.pl
+	perl_scripts/start_orthology_assignment_cluster.pl
+	perl_scripts/start_orthology_assignment_single.pl
+	perl_scripts/stats.pl
+	est_libraries/
+	User_guide.pdf
+	
+
+The documentation is available as a pdf document:
+------------------------------------------------------------------------------
+	User_guide.pdf
+
